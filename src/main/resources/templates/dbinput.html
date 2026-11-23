@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Database Input</title>
+</head>
+<body>
+<h1>Submit a String to the Database</h1>
+
+<form action="/dbinput" method="POST">
+    <label for="randomString">Enter a string:</label>
+
+    <input
+            type="text"
+            id="randomString"
+            name="randomString"
+            maxlength="50"
+            required
+    />
+
+    <button type="submit">Submit</button>
+</form>
+
+<p><a href="/database">View Database</a></p>
+</body>
+</html>
