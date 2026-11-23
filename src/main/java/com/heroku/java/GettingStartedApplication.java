@@ -64,7 +64,7 @@ public class GettingStartedApplication {
                     output.add(
                             "Read from DB: " +
                                     resultSet.getTimestamp("tick") +
-                                    " | Random String: " +
+                                    " " +
                                     resultSet.getString("random_string")
                     );
                 }
@@ -82,10 +82,7 @@ public class GettingStartedApplication {
     }
 
     @PostMapping("/dbinput")
-    String submitDatabaseInput(
-            @RequestParam("randomString") String randomString
-    ) throws SQLException {
-
+    String submitDatabaseInput(@RequestParam("randomString") String randomString) throws SQLException {
         randomString = randomString.trim();
 
         if (randomString.isEmpty() || randomString.length() > 50) {
